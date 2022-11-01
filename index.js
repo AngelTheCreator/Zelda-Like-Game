@@ -1,11 +1,8 @@
-function newImage(url, left, bottom){
-    let object = document.createElement('img')
-    object.src = url
-    object.style.position = 'fixed'
-    object.style.left = left + 'px'
-    object.style.bottom = bottom + 'px'
-    document.body.append(object)
-    return object
+function newImage(url){
+    let image = document.createElement('img')
+    object.image = url
+    document.body.append(image)
+    return image
 }
 
 function newItem(url, left, bottom){
@@ -35,6 +32,12 @@ function newInventory(){
     inventory.style.border = '2px solid black'
     inventory.style.backgroundColor = 'brown'
     document.body.append(inventory)
+}
+
+function move(image, left, bottom){
+    image.style.position = 'fixed'
+    image.style.left = left + 'px'
+    image.style.bottom = bottom + 'px'
 }
 
 newInventory()
